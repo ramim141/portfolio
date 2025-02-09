@@ -104,7 +104,10 @@
       </div>
 
       <!-- Main Navigation -->
-      <div class="bg-transparent border-b border-gray-800 transition-colors duration-300" id="navbar">
+      <div
+        class="bg-transparent border-b border-gray-800 transition-colors duration-300"
+        id="navbar"
+      >
         <div class="container mx-auto px-8 md:px-12 lg:px-24 xl:px-32">
           <div class="flex justify-between items-center h-20">
             <!-- Logo replaced with text -->
@@ -177,12 +180,12 @@
       </div>
 
       <script>
-        window.addEventListener('scroll', function() {
-          const navbar = document.getElementById('navbar');
+        window.addEventListener("scroll", function () {
+          const navbar = document.getElementById("navbar");
           if (window.scrollY > 50) {
-            navbar.classList.add('bg-black');
+            navbar.classList.add("bg-black");
           } else {
-            navbar.classList.remove('bg-black');
+            navbar.classList.remove("bg-black");
           }
         });
       </script>
@@ -207,7 +210,8 @@
             <a
               href="#skills"
               class="text-white hover:text-emerald-500 transition-colors duration-300 uppercase text-sm tracking-wider"
-              > Skills</a
+            >
+              Skills</a
             >
             <a
               href="#projects"
@@ -220,18 +224,18 @@
               >Contact</a
             >
             <a
-            href="#blog"
-            class="text-white hover:text-emerald-500 transition-colors duration-300 uppercase text-sm tracking-wider"
-            >Blog</a
-          >
+              href="#blog"
+              class="text-white hover:text-emerald-500 transition-colors duration-300 uppercase text-sm tracking-wider"
+              >Blog</a
+            >
           </div>
         </div>
       </div>
     </nav>
 
-
     <!-- Hero Section -->
-    <section id="home"
+    <section
+      id="home"
       class="min-h-screen bg-[url('./background.jpg')] bg-cover bg-center flex items-center pt-20 md:pt-32"
     >
       <div class="container mx-auto px-4 sm:px-6 md:px-8 lg:px-24 xl:px-32">
@@ -752,7 +756,6 @@
     <!-- Channel Section -->
     <section class="bg-black py-12 sm:py-16 md:py-20" id="channel">
       <div class="container mx-auto px-4 sm:px-6 md:px-8 lg:px-24 xl:px-32">
-
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
           <!-- Text Content -->
           <div class="space-y-6 md:space-y-8 text-center lg:text-left">
@@ -776,12 +779,14 @@
             <div
               class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
             >
-              <button href="https://www.youtube.com/@codewithramu"
+              <button
+                href="https://www.youtube.com/@codewithramu"
                 class="px-8 py-3 bg-[#08D665] text-white font-medium rounded-lg hover:bg-[#06b554] transition-colors duration-300"
               >
                 Watch Now
               </button>
-              <button href="https://www.youtube.com/@codewithramu"
+              <button
+                href="https://www.youtube.com/@codewithramu"
                 class="px-8 py-3 border border-white text-white font-medium rounded-lg hover:bg-white hover:text-black transition-all duration-300"
               >
                 View Channel
@@ -789,54 +794,67 @@
             </div>
           </div>
 
-         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-           <!-- Video 1 -->
-           <div class="group bg-[#1C1E29] rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-[#08D665]/20 hover:-translate-y-2">
-             <div class="relative w-full pb-[56.25%] overflow-hidden">
-               <iframe
-                 src="https://www.youtube.com/embed/videoseries?list=PL9P7ljTbmNa3_zkGBGDi0Um1KkiJeYpi5"
-                 title="Data Structure Bangla Tutorial"
-                 frameborder="0"
-                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                 allowfullscreen
-                 class="absolute top-0 left-0 w-full h-full"
-               ></iframe>
-             </div>
-             <div class="p-6">
-               <h3 class="text-white font-['Oswald'] text-xl font-semibold mb-2 group-hover:text-[#08D665] transition-colors duration-300">
-                 Data Structure Bangla Tutorial
-               </h3>
-               <p class="font-['Rubik'] text-gray-400 text-sm group-hover:text-white/90 transition-colors duration-300">
-                 This tutorial introduces data structures in Bengali, covering key concepts and types.
-               </p>
-             </div>
-
-           </div>
-
-           <!-- Video 2 -->
-           <div class="group bg-[#1C1E29] rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-[#08D665]/20 hover:-translate-y-2">
-            <div class="relative w-full pb-[56.25%] overflow-hidden">
-              <iframe
-                src="https://www.youtube.com/embed/YXUbYdCYEcA"
-                title="C Programming for Beginners"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-                class="absolute top-0 left-0 w-full h-full"
-              ></iframe>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Video 1 -->
+            <div
+              class="group bg-[#1C1E29] rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-[#08D665]/20 hover:-translate-y-2"
+            >
+              <div class="relative w-full pb-[56.25%] overflow-hidden">
+                <iframe
+                  src="https://www.youtube.com/embed/videoseries?list=PL9P7ljTbmNa3_zkGBGDi0Um1KkiJeYpi5"
+                  title="Data Structure Bangla Tutorial"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                  class="absolute top-0 left-0 w-full h-full"
+                ></iframe>
+              </div>
+              <div class="p-6">
+                <h3
+                  class="text-white font-['Oswald'] text-xl font-semibold mb-2 group-hover:text-[#08D665] transition-colors duration-300"
+                >
+                  Data Structure Bangla Tutorial
+                </h3>
+                <p
+                  class="font-['Rubik'] text-gray-400 text-sm group-hover:text-white/90 transition-colors duration-300"
+                >
+                  This tutorial introduces data structures in Bengali, covering
+                  key concepts and types.
+                </p>
+              </div>
             </div>
-             <div class="p-6">
-               <h3 class="font-['Oswald'] text-white text-xl font-semibold mb-2 group-hover:text-[#08D665] transition-colors duration-300">
-                 C Programming for Beginners
-               </h3>
 
-               <p class="font-['Rubik'] text-gray-400 text-sm group-hover:text-white/90 transition-colors duration-300">
-                 This guide provides a concise introduction to C programming for beginners, covering basic syntax, concepts, and practical coding examples.
-               </p>
-             </div>
+            <!-- Video 2 -->
+            <div
+              class="group bg-[#1C1E29] rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-[#08D665]/20 hover:-translate-y-2"
+            >
+              <div class="relative w-full pb-[56.25%] overflow-hidden">
+                <iframe
+                  src="https://www.youtube.com/embed/YXUbYdCYEcA"
+                  title="C Programming for Beginners"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                  class="absolute top-0 left-0 w-full h-full"
+                ></iframe>
+              </div>
+              <div class="p-6">
+                <h3
+                  class="font-['Oswald'] text-white text-xl font-semibold mb-2 group-hover:text-[#08D665] transition-colors duration-300"
+                >
+                  C Programming for Beginners
+                </h3>
 
-           </div>
-         </div>
+                <p
+                  class="font-['Rubik'] text-gray-400 text-sm group-hover:text-white/90 transition-colors duration-300"
+                >
+                  This guide provides a concise introduction to C programming
+                  for beginners, covering basic syntax, concepts, and practical
+                  coding examples.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -856,27 +874,31 @@
           >
             Testimonials
           </h4>
-          <div class="flex items-center gap-8">
+          <div class="flex flex-col md:flex-row items-center gap-8">
             <h2
-              class="text-white text-5xl font-bold whitespace-nowrap leading-tight font-['Oswald']"
+              class="text-white text-3xl sm:text-4xl md:text-5xl font-bold whitespace-nowrap leading-tight font-['Oswald']"
             >
               Happy Wisher <span class="text-[#00ff62]">Says</span>
             </h2>
             <!-- Vertical Line -->
-            <div class="w-px h-16 bg-[#00ff62]"></div>
+            <div class="hidden md:block w-px h-16 bg-[#00ff62]"></div>
             <!-- Right side text -->
-            <p class="text-white/80 text-xl max-w-md">
+            <p
+              class="text-white/80 text-base sm:text-lg md:text-xl max-w-md text-center md:text-left"
+            >
               A passionate educator and programmer, always striving to share
               knowledge and inspire future tech enthusiasts.
             </p>
             <!-- Navigation Arrows -->
-            <div class="ml-auto flex gap-4">
+            <div
+              class="flex gap-4 justify-center mt-8 md:mt-0 md:absolute md:right-0 mr-32"
+            >
               <button
-                class="w-12 h-12 border border-[#00ff62] rounded-sm flex items-center justify-center group hover:bg-[#00ff62] transition-colors"
+                class="w-10 h-10 sm:w-12 sm:h-12 border border-[#00ff62] rounded-sm flex items-center justify-center group hover:bg-[#00ff62] transition-colors"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  class="h-6 w-6 text-[#00ff62] group-hover:text-black"
+                  class="h-5 w-5 sm:h-6 sm:w-6 text-[#00ff62] group-hover:text-black"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -890,11 +912,11 @@
                 </svg>
               </button>
               <button
-                class="w-12 h-12 border border-[#00ff62] rounded-sm flex items-center justify-center group hover:bg-[#00ff62] transition-colors"
+                class="w-10 h-10 sm:w-12 sm:h-12 border border-[#00ff62] rounded-sm flex items-center justify-center group hover:bg-[#00ff62] transition-colors"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  class="h-6 w-6 text-[#00ff62] group-hover:text-black"
+                  class="h-5 w-5 sm:h-6 sm:w-6 text-[#00ff62] group-hover:text-black"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -914,9 +936,11 @@
         <!-- Testimonial Content -->
         <div class="relative max-w-5xl mx-auto">
           <!-- Content -->
-          <div class="flex items-start gap-12">
+          <div class="flex flex-col md:flex-row items-start gap-8 md:gap-12">
             <!-- Profile Image -->
-            <div class="w-32 h-32 flex-shrink-0 mr-12">
+            <div
+              class="w-24 h-24 sm:w-32 sm:h-32 flex-shrink-0 mb-4 md:mb-0 md:mr-12 flex justify-center items-center md:justify-start md:items-start mx-auto md:mx-0"
+            >
               <img
                 src="./Ramim Ahmed.png"
                 alt="Client"
@@ -927,26 +951,28 @@
             <!-- Testimonial Text -->
             <div class="flex-1 relative">
               <!-- Large Quote Mark -->
-              <div class="absolute -left-[70px] -top-16">
+              <div class="absolute -left-8 sm:-left-16 -top-8 sm:-top-16">
                 <span
-                  class="text-[#00ff62] text-[200px] leading-none opacity-20 font-serif"
+                  class="text-[#00ff62] text-[100px] sm:text-[200px] leading-none opacity-20 font-serif"
                   >"</span
                 >
               </div>
 
               <p
-                class="text-white text-4xl font-light leading-tight mb-8 font-['Oswald'] justify-center align-middle"
+                class="text-white text-lg sm:text-2xl md:text-4xl font-light leading-tight mb-4 sm:mb-8 font-['Oswald'] text-center md:text-left"
               >
                 GILROY IS A GREAT AND SUPER-PROFESSIONAL SERVICE PROVIDER, WHICH
                 BROUGHT NEW TECHNOLOGIES, NEW METHODOLOGY, AND A FRESH
                 PERSPECTIVE TO OUR PROJECT
               </p>
 
-              <div>
-                <h3 class="text-[#00ff62] text-2xl font-medium mb-2">
+              <div class="text-center md:text-left">
+                <h3
+                  class="text-[#00ff62] text-xl sm:text-2xl font-medium mb-1 sm:mb-2"
+                >
                   Jack Metiyo Shina
                 </h3>
-                <p class="text-gray-400 text-lg">NYC, USA</p>
+                <p class="text-gray-400 text-base sm:text-lg">NYC, USA</p>
               </div>
             </div>
           </div>
