@@ -1,0 +1,29 @@
+/* Custom styles */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Mobile menu animations */
+.mobile-menu-slide-enter {
+    transform: translateY(-100%);
+    opacity: 0;
+}
+
+.mobile-menu-slide-enter-active {
+    transform: translateY(0);
+    opacity: 1;
+    transition: all 0.3s ease-out;
+}
+
+/* Navbar scroll effect */
+.nav-scrolled {
+    transform: translateY(-40px); /* Height of the top bar */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Utility classes */
+.truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
