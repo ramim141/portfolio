@@ -26,7 +26,7 @@
   </head>
   <body class="font-sans bg-black">
     <!-- Navigation -->
-    <nav class="fixed w-full z-50">
+    <nav class="fixed w-full z-50 transition-colors duration-300" id="navbar">
       <!-- Top Bar - Hidden on mobile -->
       <div class="hidden md:block bg-[#2c3237]">
         <div class="container mx-auto px-8 md:px-12 lg:px-24 xl:px-32">
@@ -104,11 +104,11 @@
       </div>
 
       <!-- Main Navigation -->
-      <div class="bg-transparent border-b border-gray-800">
+      <div class="bg-transparent border-b border-gray-800 transition-colors duration-300" id="navbar">
         <div class="container mx-auto px-8 md:px-12 lg:px-24 xl:px-32">
           <div class="flex justify-between items-center h-20">
             <!-- Logo replaced with text -->
-            <a href="#" class="flex items-center">
+            <a href="#home" class="flex items-center">
               <span
                 class="text-3xl font-bold text-white hover:text-emerald-500 transition-colors duration-300"
                 >RAMU</span
@@ -128,17 +128,17 @@
                 >About</a
               >
               <a
-                href="#service"
-                class="text-white hover:text-emerald-500 transition-colors duration-300 uppercase text-sm tracking-wider relative after:absolute after:top-12 after:left-0 after:w-0 after:h-0.5 after:bg-emerald-500 after:transition-all after:duration-300 hover:after:w-full"
-                >Service</a
-              >
-              <a
-                href="#portfolio"
+                href="#projects"
                 class="text-white hover:text-emerald-500 transition-colors duration-300 uppercase text-sm tracking-wider relative after:absolute after:top-12 after:left-0 after:w-0 after:h-0.5 after:bg-emerald-500 after:transition-all after:duration-300 hover:after:w-full"
                 >Projects</a
               >
               <a
-                href="#pages"
+                href="#skills"
+                class="text-white hover:text-emerald-500 transition-colors duration-300 uppercase text-sm tracking-wider relative after:absolute after:top-12 after:left-0 after:w-0 after:h-0.5 after:bg-emerald-500 after:transition-all after:duration-300 hover:after:w-full"
+                >Skils</a
+              >
+              <a
+                href="#channel"
                 class="text-white hover:text-emerald-500 transition-colors duration-300 uppercase text-sm tracking-wider relative after:absolute after:top-12 after:left-0 after:w-0 after:h-0.5 after:bg-emerald-500 after:transition-all after:duration-300 hover:after:w-full"
                 >Blog</a
               >
@@ -176,6 +176,17 @@
         </div>
       </div>
 
+      <script>
+        window.addEventListener('scroll', function() {
+          const navbar = document.getElementById('navbar');
+          if (window.scrollY > 50) {
+            navbar.classList.add('bg-black');
+          } else {
+            navbar.classList.remove('bg-black');
+          }
+        });
+      </script>
+
       <!-- Mobile Menu (Hidden by default) -->
       <div
         class="hidden absolute w-full bg-black border-t border-gray-800"
@@ -194,38 +205,53 @@
               >About</a
             >
             <a
-              href="#service"
+              href="#skills"
               class="text-white hover:text-emerald-500 transition-colors duration-300 uppercase text-sm tracking-wider"
-              >Service</a
+              > Skills</a
             >
             <a
-              href="#portfolio"
+              href="#projects"
               class="text-white hover:text-emerald-500 transition-colors duration-300 uppercase text-sm tracking-wider"
-              >Portfolio</a
+              >Projects</a
             >
             <a
-              href="#pages"
+              href="#Contact"
               class="text-white hover:text-emerald-500 transition-colors duration-300 uppercase text-sm tracking-wider"
-              >Pages</a
+              >Contact</a
             >
+            <a
+            href="#blog"
+            class="text-white hover:text-emerald-500 transition-colors duration-300 uppercase text-sm tracking-wider"
+            >Blog</a
+          >
           </div>
         </div>
       </div>
     </nav>
 
+
     <!-- Hero Section -->
-    <section class="min-h-screen bg-[url('./background.jpg')] bg-cover bg-center flex items-center pt-20 md:pt-32">
+    <section id="home"
+      class="min-h-screen bg-[url('./background.jpg')] bg-cover bg-center flex items-center pt-20 md:pt-32"
+    >
       <div class="container mx-auto px-4 sm:px-6 md:px-8 lg:px-24 xl:px-32">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center"
+        >
           <!-- Left Content -->
           <div class="space-y-6 text-center md:text-left">
-            <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[80px] leading-tight font-['Oswald'] font-semibold">
+            <h1
+              class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[80px] leading-tight font-['Oswald'] font-semibold"
+            >
               <span class="text-[#08D665] block mb-2">IMAGINATION</span>
               <span class="text-white">IS MORE IMPORTANT THAN KNOWLEDGE</span>
             </h1>
-            <p class="text-gray-400 text-base md:text-lg max-w-xl md:flex items-center font-['Rubik'] font-normal">
+            <p
+              class="text-gray-400 text-base md:text-lg max-w-xl md:flex items-center font-['Rubik'] font-normal"
+            >
               <span class="hidden md:block w-0.5 h-20 bg-[#08D665] mr-6"></span>
-              Together we the people achieve more than any single person could ever do alone.
+              Together we the people achieve more than any single person could
+              ever do alone.
             </p>
             <div class="pt-4">
               <a
@@ -266,15 +292,17 @@
     </section>
 
     <!-- About Section -->
-    <section class="bg-[#1C1E29] py-12 sm:py-16 md:py-20">
+    <section class="bg-[#1C1E29] py-12 sm:py-16 md:py-20" id="about">
       <div class="container mx-auto px-4 sm:px-6 md:px-8 lg:px-24 xl:px-32">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-start">
+        <div
+          class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-start"
+        >
           <!-- Left Side - Image -->
           <div class="relative order-2 lg:order-1">
             <img
-              src="./Ramim Ahmed.png" 
+              src="./Ramim Ahmed.png"
               alt="Profile"
-              class="w-full h-[250px] sm:h-[350px] md:h-[400px] lg:h-[500px] object-cover rounded-lg shadow-xl"
+              class="w-full h-[400px] sm:h-[450px] md:h-[500px] lg:h-[600px] object-cover rounded-lg shadow-xl"
             />
           </div>
 
@@ -288,27 +316,42 @@
               </h2>
             </div>
             <!--Description about me My Name is Ramim Ahmed-->
-            <p class="text-gray-400 text-base md:text-lg font-['Rubik'] leading-relaxed">
-              I'm a passionate and dedicated student with a keen interest in computer science and engineering. I'm currently pursuing my Bachelor's degree in Computer Science and Engineering at Metropolitan University, Sylhet.
+            <p
+              class="text-gray-400 text-base md:text-lg font-['Rubik'] leading-relaxed"
+            >
+              I'm a passionate and dedicated student with a keen interest in
+              computer science and engineering. I'm currently pursuing my
+              Bachelor's degree in Computer Science and Engineering at
+              Metropolitan University, Sylhet.
             </p>
             <!-- Current Studies Section -->
             <div class="space-y-6">
               <div class="flex items-center gap-4">
                 <i class="fas fa-graduation-cap text-2xl text-[#08D665]"></i>
-                <h3 class="text-2xl text-white font-['Oswald'] uppercase">Current Studies</h3>
+                <h3 class="text-2xl text-white font-['Oswald'] uppercase">
+                  Current Studies
+                </h3>
               </div>
-              
+
               <div class="space-y-4">
-                <div class="flex flex-col sm:flex-row justify-between items-start">
-                  <div class="order-1 sm:order-2">
-                    <h4 class="text-[#08D665] text-lg font-semibold">Department of Computer Science and Engineering</h4>
+                <div
+                  class="flex flex-col sm:flex-row justify-between items-start"
+                >
+                  <div class="order-2 sm:order-1">
+                    <h4 class="text-[#08D665] text-lg font-semibold">
+                      Department of Computer Science and Engineering
+                    </h4>
                     <p class="text-gray-400">Metropolitan University</p>
-                    <div class="order-2 sm:order-1">
-                      <span class="text-gray-400">2022 - Present</span>
-                    </div>
                     <p class="text-gray-400">3rd Year, 2nd Semester</p>
+                    <span class="text-gray-400 block sm:hidden"
+                      >2022 - Present</span
+                    >
                   </div>
-                  
+                  <div class="order-1 sm:order-2">
+                    <span class="text-gray-400 hidden sm:block"
+                      >2022 - Present</span
+                    >
+                  </div>
                 </div>
               </div>
             </div>
@@ -317,26 +360,52 @@
             <div class="space-y-6">
               <div class="flex items-center gap-4">
                 <i class="fas fa-book text-2xl text-[#08D665]"></i>
-                <h3 class="text-2xl text-white font-['Oswald'] uppercase">Education</h3>
+                <h3 class="text-2xl text-white font-['Oswald'] uppercase">
+                  Education
+                </h3>
               </div>
-              
+
               <div class="space-y-4">
-                <div class="flex flex-col sm:flex-row justify-between items-start">
-                  <div class="order-1 sm:order-2">
-                    <h4 class="text-[#08D665] text-lg font-semibold">Department of Computer Science and Engineering</h4>
-                    <p class="text-gray-400">Metropolitan University</p>
-                  </div>
+                <div
+                  class="flex flex-col sm:flex-row justify-between items-start"
+                >
                   <div class="order-2 sm:order-1">
-                    <span class="text-gray-400">2022 - Present</span>
+                    <h4 class="text-[#08D665] text-lg font-semibold">
+                      Department of Computer Science and Engineering
+                    </h4>
+                    <p class="text-gray-400">Metropolitan University</p>
+                    <p class="text-gray-400">3rd Year, 2nd Semester</p>
+                    <span class="text-gray-400 block sm:hidden"
+                      >2022 - Present</span
+                    >
+                  </div>
+                  <div class="order-1 sm:order-2">
+                    <span class="text-gray-400 hidden sm:block"
+                      >2022 - Present</span
+                    >
                   </div>
                 </div>
 
-                <div class="flex justify-between items-start">
-                  <div>
-                    <h4 class="text-[#08D665] text-lg font-semibold">Higher Secondary Certificate</h4>
-                    <p class="text-gray-400">Sylhet Government College, Sylhet</p>
+                <div
+                  class="flex flex-col sm:flex-row justify-between items-start"
+                >
+                  <div class="order-2 sm:order-1">
+                    <h4 class="text-[#08D665] text-lg font-semibold">
+                      Higher Secondary Certificate
+                    </h4>
+                    <p class="text-gray-400">
+                      Sylhet Government College, Sylhet
+                    </p>
+                    <p class="text-gray-400">Completed</p>
+                    <span class="text-gray-400 block sm:hidden"
+                      >2019 - 2021</span
+                    >
                   </div>
-                  <span class="text-gray-400">2019 - 2021</span>
+                  <div class="order-1 sm:order-2">
+                    <span class="text-gray-400 hidden sm:block"
+                      >2019 - 2021</span
+                    >
+                  </div>
                 </div>
               </div>
             </div>
@@ -345,122 +414,734 @@
       </div>
     </section>
 
-    <!-- Services Section -->
-    <section class="bg-black py-12 sm:py-16 md:py-20">
+    <!-- Skills Section -->
+    <section class="bg-black py-12 sm:py-16 md:py-20" id="skills">
       <div class="container mx-auto px-4 sm:px-6 md:px-8 lg:px-24 xl:px-32">
+        <h2
+          class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-['Oswald'] font-bold text-purple-500 text-center mb-8"
+        >
+          My Skills
+        </h2>
+        <p class="text-gray-400 text-center mb-12 font-['Rubik']">
+          Here are some of the skills we use to make it happen.
+        </p>
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+          <div
+            class="flex flex-col items-center bg-[#1C1E29] p-4 rounded-lg hover:bg-transparent hover:border hover:border-[#08D665]"
+          >
+            <img
+              src="https://skillicons.dev/icons?i=python"
+              alt="Python"
+              class="mb-2"
+            />
+            <span class="text-white font-['Rubik']">Python</span>
+          </div>
+          <div
+            class="flex flex-col items-center bg-[#1C1E29] p-4 rounded-lg hover:bg-transparent hover:border hover:border-[#08D665]"
+          >
+            <img
+              src="https://skillicons.dev/icons?i=django"
+              alt="Django"
+              class="mb-2"
+            />
+            <span class="text-white font-['Rubik']">Django</span>
+          </div>
+          <div
+            class="flex flex-col items-center bg-[#1C1E29] p-4 rounded-lg hover:bg-transparent hover:border hover:border-[#08D665]"
+          >
+            <img
+              src="https://skillicons.dev/icons?i=javascript"
+              alt="JavaScript"
+              class="mb-2"
+            />
+            <span class="text-white font-['Rubik']">JavaScript</span>
+          </div>
+          <div
+            class="flex flex-col items-center bg-[#1C1E29] p-4 rounded-lg hover:bg-transparent hover:border hover:border-[#08D665]"
+          >
+            <img
+              src="https://skillicons.dev/icons?i=html"
+              alt="HTML"
+              class="mb-2"
+            />
+            <span class="text-white font-['Rubik']">HTML</span>
+          </div>
+          <div
+            class="flex flex-col items-center bg-[#1C1E29] p-4 rounded-lg hover:bg-transparent hover:border hover:border-[#08D665]"
+          >
+            <img
+              src="https://skillicons.dev/icons?i=tailwind"
+              alt="Tailwind"
+              class="mb-2"
+            />
+            <span class="text-white font-['Rubik']">Tailwind</span>
+          </div>
+          <div
+            class="flex flex-col items-center bg-[#1C1E29] p-4 rounded-lg hover:bg-transparent hover:border hover:border-[#08D665]"
+          >
+            <img
+              src="https://skillicons.dev/icons?i=bootstrap"
+              alt="Bootstrap"
+              class="mb-2"
+            />
+            <span class="text-white font-['Rubik']">Bootstrap</span>
+          </div>
+          <div
+            class="flex flex-col items-center bg-[#1C1E29] p-4 rounded-lg hover:bg-transparent hover:border hover:border-[#08D665]"
+          >
+            <img
+              src="https://skillicons.dev/icons?i=mysql"
+              alt="MySQL"
+              class="mb-2"
+            />
+            <span class="text-white font-['Rubik']">MySQL</span>
+          </div>
+          <div
+            class="flex flex-col items-center bg-[#1C1E29] p-4 rounded-lg hover:bg-transparent hover:border hover:border-[#08D665]"
+          >
+            <img
+              src="https://skillicons.dev/icons?i=sqlite"
+              alt="SQLite"
+              class="mb-2"
+            />
+            <span class="text-white font-['Rubik']">SQLite</span>
+          </div>
+          <div
+            class="flex flex-col items-center bg-[#1C1E29] p-4 rounded-lg hover:bg-transparent hover:border hover:border-[#08D665]"
+          >
+            <img
+              src="https://skillicons.dev/icons?i=git"
+              alt="Git"
+              class="mb-2"
+            />
+            <span class="text-white font-['Rubik']">Git</span>
+          </div>
+          <div
+            class="flex flex-col items-center bg-[#1C1E29] p-4 rounded-lg hover:bg-transparent hover:border hover:border-[#08D665]"
+          >
+            <img
+              src="https://skillicons.dev/icons?i=github"
+              alt="GitHub"
+              class="mb-2"
+            />
+            <span class="text-white font-['Rubik']">GitHub</span>
+          </div>
+          <div
+            class="flex flex-col items-center bg-[#1C1E29] p-4 rounded-lg hover:bg-transparent hover:border hover:border-[#08D665]"
+          >
+            <img
+              src="https://skillicons.dev/icons?i=cpp"
+              alt="C++"
+              class="mb-2"
+            />
+            <span class="text-white font-['Rubik']">C++</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Training and Course Section -->
+    <section class="bg-[#1C1E29] py-12 sm:py-16 md:py-20">
+      <div class="container mx-auto px-4 sm:px-6 md:px-8 lg:px-24 xl:px-32">
+        <h2
+          class="text-4xl font-['Oswald'] font-bold text-center text-[#08D665] mb-8"
+        >
+          <i class="fas fa-book-open mr-2"></i> Training and Courses
+        </h2>
+
+        <div
+          class="flex flex-col md:flex-row items-center bg-black p-6 rounded-lg"
+        >
+          <div class="flex-shrink-0 mb-4 md:mb-0 md:mr-6">
+            <i class="fas fa-graduation-cap text-4xl text-[#08D665]"></i>
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold text-white mb-2">
+              Complete Python Programming and Basic Data Science Training
+            </h3>
+            <p class="text-gray-400 mb-1">
+              Institute of Information and Communication Technology (IICT), SUST
+            </p>
+            <p class="text-gray-400 mb-1">Sept 2024 - Nov 2024 (80 Hours)</p>
+          </div>
+        </div>
+
+        <div
+          class="flex flex-col md:flex-row items-center bg-black p-6 rounded-lg mt-4"
+        >
+          <div class="flex-shrink-0 mb-4 md:mb-0 md:mr-6">
+            <i class="fas fa-book text-4xl text-[#08D665]"></i>
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold text-white mb-2">
+              CSE Fundamentals With Phitron
+            </h3>
+            <p class="text-gray-400 mb-1">Spring 2023</p>
+            <p class="text-gray-400 mb-1">
+              For successfully earning a grade point average (CGPA) 3.33 during
+              spring 2023 semester at phitron.io
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Project Section-->
+    <section class="bg-black py-12 sm:py-16 md:py-20" id="projects">
+      <div class="container mx-auto px-4 sm:px-6 md:px-8 lg:px-24 xl:px-32">
+        <h2
+          class="text-5xl sm:text-6xl font-['Oswald'] font-bold text-center text-[#08D665] mb-8"
+        >
+          <i class="fas fa-book-open mr-2"></i> All Projects
+        </h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+          <div
+            class="bg-[#1C1E29] p-6 rounded-lg hover:bg-transparent hover:border hover:border-[#08D665] group relative overflow-hidden"
+          >
+            <img
+              src="./project.png"
+              alt="Dynamic"
+              class="mb-4 transition-transform duration-300 group-hover:scale-110"
+            />
+            <div
+              class="absolute inset-0 bg-black bg-opacity-70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center gap-4"
+            >
+              <h3 class="text-2xl font-['Oswald'] font-semibold text-white">
+                Dynamic
+              </h3>
+              <button
+                class="px-6 py-2 bg-[#08D665] text-white rounded-lg hover:bg-[#06b554] transition-colors duration-300"
+              >
+                View Project
+              </button>
+            </div>
+            <h3 class="text-2xl font-['Oswald'] font-semibold text-white mb-2">
+              Dynamic
+            </h3>
+            <p class="text-gray-400 mb-1">Web Designing</p>
+          </div>
+          <div
+            class="bg-[#1C1E29] p-6 rounded-lg hover:bg-transparent hover:border hover:border-[#08D665] group relative overflow-hidden"
+          >
+            <img
+              src="./project.png"
+              alt="Seven Studio"
+              class="mb-4 transition-transform duration-300 group-hover:scale-110"
+            />
+            <div
+              class="absolute inset-0 bg-black bg-opacity-70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center gap-4"
+            >
+              <h3 class="text-2xl font-['Oswald'] font-semibold text-white">
+                Seven Studio
+              </h3>
+              <button
+                class="px-6 py-2 bg-[#08D665] text-white rounded-lg hover:bg-[#06b554] transition-colors duration-300"
+              >
+                View Project
+              </button>
+            </div>
+            <h3 class="text-2xl font-['Oswald'] font-semibold text-white mb-2">
+              Seven Studio
+            </h3>
+            <p class="text-gray-400 mb-1">Mobile Designing</p>
+          </div>
+          <div
+            class="bg-[#1C1E29] p-6 rounded-lg hover:bg-transparent hover:border hover:border-[#08D665] group relative overflow-hidden"
+          >
+            <img
+              src="p./project.png"
+              alt="Raven Studio"
+              class="mb-4 transition-transform duration-300 group-hover:scale-110"
+            />
+            <div
+              class="absolute inset-0 bg-black bg-opacity-70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center gap-4"
+            >
+              <h3 class="text-2xl font-['Oswald'] font-semibold text-white">
+                Raven Studio
+              </h3>
+              <button
+                class="px-6 py-2 bg-[#08D665] text-white rounded-lg hover:bg-[#06b554] transition-colors duration-300"
+              >
+                View Project
+              </button>
+            </div>
+            <h3 class="text-2xl font-['Oswald'] font-semibold text-white mb-2">
+              Raven Studio
+            </h3>
+            <p class="text-gray-400 mb-1">Branding</p>
+          </div>
+          <div
+            class="bg-[#1C1E29] p-6 rounded-lg hover:bg-transparent hover:border hover:border-[#08D665] group relative overflow-hidden"
+          >
+            <img
+              src="./project.png"
+              alt="Diesel H1"
+              class="mb-4 transition-transform duration-300 group-hover:scale-110"
+            />
+            <div
+              class="absolute inset-0 bg-black bg-opacity-70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center gap-4"
+            >
+              <h3 class="text-2xl font-['Oswald'] font-semibold text-white">
+                Diesel H1
+              </h3>
+              <button
+                class="px-6 py-2 bg-[#08D665] text-white rounded-lg hover:bg-[#06b554] transition-colors duration-300"
+              >
+                View Project
+              </button>
+            </div>
+            <h3 class="text-2xl font-['Oswald'] font-semibold text-white mb-2">
+              Diesel H1
+            </h3>
+            <p class="text-gray-400 mb-1">Photography</p>
+          </div>
+          <div
+            class="bg-[#1C1E29] p-6 rounded-lg hover:bg-transparent hover:border hover:border-[#08D665] group relative overflow-hidden"
+          >
+            <img
+              src="./project.png"
+              alt="Submarine"
+              class="mb-4 transition-transform duration-300 group-hover:scale-110"
+            />
+            <div
+              class="absolute inset-0 bg-black bg-opacity-70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center gap-4"
+            >
+              <h3 class="text-2xl font-['Oswald'] font-semibold text-white">
+                Submarine
+              </h3>
+              <button
+                class="px-6 py-2 bg-[#08D665] text-white rounded-lg hover:bg-[#06b554] transition-colors duration-300"
+              >
+                View Project
+              </button>
+            </div>
+            <h3 class="text-2xl font-['Oswald'] font-semibold text-white mb-2">
+              Submarine
+            </h3>
+            <p class="text-gray-400 mb-1">Mobile Designing</p>
+          </div>
+          <div
+            class="bg-[#1C1E29] p-6 rounded-lg hover:bg-transparent hover:border hover:border-[#08D665] group relative overflow-hidden"
+          >
+            <img
+              src="./project.png"
+              alt="Hydra Merc"
+              class="mb-4 transition-transform duration-300 group-hover:scale-110"
+            />
+            <div
+              class="absolute inset-0 bg-black bg-opacity-70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center gap-4"
+            >
+              <h3 class="text-2xl font-['Oswald'] font-semibold text-white">
+                Hydra Merc
+              </h3>
+              <button
+                class="px-6 py-2 bg-[#08D665] text-white rounded-lg hover:bg-[#06b554] transition-colors duration-300"
+              >
+                View Project
+              </button>
+            </div>
+            <h3 class="text-2xl font-['Oswald'] font-semibold text-white mb-2">
+              Hydra Merc
+            </h3>
+            <p class="text-gray-400 mb-1">Web Designing</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Channel Section -->
+    <section class="bg-black py-12 sm:py-16 md:py-20" id="channel">
+      <div class="container mx-auto px-4 sm:px-6 md:px-8 lg:px-24 xl:px-32">
+
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
           <!-- Text Content -->
           <div class="space-y-6 md:space-y-8 text-center lg:text-left">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-['Oswald'] font-bold leading-tight">
-              <span class="text-white">WE SHAPE THE</span>
-              <span class="text-[#08D665] block">PERFECT</span>
-              <span class="text-white">SOLUTIONS</span>
+            <h2 class="font-['Oswald'] font-bold leading-tight">
+              <span class="text-2xl text-white"
+                >EXPLORE MY YOUTUBE CHANNEL</span
+              >
+              <!--youtube logo icon-->
+              <i class="fab fa-youtube text-4xl text-[#08D665]"></i>
+              <span
+                class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-[#08D665] block"
+                >CODE WITH RAMU</span
+              >
             </h2>
-            <p class="text-gray-400 text-base md:text-lg font-['Rubik'] leading-relaxed">
-              We are dedicated to providing innovative solutions that transform businesses. Our team of experts combines creativity with technical excellence to deliver outstanding results that exceed expectations.
+            <p
+              class="text-gray-400 text-lg md:text-xl font-['Rubik'] leading-relaxed"
+            >
+              Dive into engaging tutorials on data structures, competitive
+              programming, and more!
             </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <button class="px-8 py-3 bg-[#08D665] text-white font-medium rounded hover:bg-[#06b554] transition-colors duration-300">
-                Get Started
+            <div
+              class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
+            >
+              <button href="https://www.youtube.com/@codewithramu"
+                class="px-8 py-3 bg-[#08D665] text-white font-medium rounded-lg hover:bg-[#06b554] transition-colors duration-300"
+              >
+                Watch Now
               </button>
-              <button class="px-8 py-3 border border-white text-white font-medium rounded hover:bg-white hover:text-black transition-all duration-300">
-                Learn More
+              <button href="https://www.youtube.com/@codewithramu"
+                class="px-8 py-3 border border-white text-white font-medium rounded-lg hover:bg-white hover:text-black transition-all duration-300"
+              >
+                View Channel
               </button>
             </div>
           </div>
 
-          <!-- Services Grid -->
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
-            <!-- Digital Products -->
-            <div class="group p-4 md:p-6 bg-[#1C1E29] rounded-lg hover:bg-[#08D665] transform hover:-translate-y-2 transition-all duration-300">
-              <div class="mb-4">
-                <i class="fas fa-laptop-code text-4xl text-[#08D665] group-hover:text-white transition-colors duration-300"></i>
-              </div>
-              <h3 class="text-white text-xl font-semibold mb-3">Digital Products</h3>
-              <p class="text-gray-400 group-hover:text-white/90 text-sm transition-colors duration-300">
-                Custom digital solutions tailored to your business needs.
-              </p>
-            </div>
+         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+           <!-- Video 1 -->
+           <div class="group bg-[#1C1E29] rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-[#08D665]/20 hover:-translate-y-2">
+             <div class="relative w-full pb-[56.25%] overflow-hidden">
+               <iframe
+                 src="https://www.youtube.com/embed/videoseries?list=PL9P7ljTbmNa3_zkGBGDi0Um1KkiJeYpi5"
+                 title="Data Structure Bangla Tutorial"
+                 frameborder="0"
+                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                 allowfullscreen
+                 class="absolute top-0 left-0 w-full h-full"
+               ></iframe>
+             </div>
+             <div class="p-6">
+               <h3 class="text-white font-['Oswald'] text-xl font-semibold mb-2 group-hover:text-[#08D665] transition-colors duration-300">
+                 Data Structure Bangla Tutorial
+               </h3>
+               <p class="font-['Rubik'] text-gray-400 text-sm group-hover:text-white/90 transition-colors duration-300">
+                 This tutorial introduces data structures in Bengali, covering key concepts and types.
+               </p>
+             </div>
 
-            <!-- Marketing -->
-            <div class="group p-4 md:p-6 bg-[#1C1E29] rounded-lg hover:bg-[#08D665] transform hover:-translate-y-2 transition-all duration-300">
-              <div class="mb-4">
-                <i class="fas fa-bullhorn text-4xl text-[#08D665] group-hover:text-white transition-colors duration-300"></i>
-              </div>
-              <h3 class="text-white text-xl font-semibold mb-3">Marketing</h3>
-              <p class="text-gray-400 group-hover:text-white/90 text-sm transition-colors duration-300">
-                Strategic marketing campaigns that drive results.
-              </p>
-            </div>
+           </div>
 
-            <!-- Web Development -->
-            <div class="group p-4 md:p-6 bg-[#1C1E29] rounded-lg hover:bg-[#08D665] transform hover:-translate-y-2 transition-all duration-300">
-              <div class="mb-4">
-                <i class="fas fa-code text-4xl text-[#08D665] group-hover:text-white transition-colors duration-300"></i>
-              </div>
-              <h3 class="text-white text-xl font-semibold mb-3">Web Development</h3>
-              <p class="text-gray-400 group-hover:text-white/90 text-sm transition-colors duration-300">
-                Modern and responsive websites built for success.
-              </p>
+           <!-- Video 2 -->
+           <div class="group bg-[#1C1E29] rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-[#08D665]/20 hover:-translate-y-2">
+            <div class="relative w-full pb-[56.25%] overflow-hidden">
+              <iframe
+                src="https://www.youtube.com/embed/YXUbYdCYEcA"
+                title="C Programming for Beginners"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+                class="absolute top-0 left-0 w-full h-full"
+              ></iframe>
             </div>
+             <div class="p-6">
+               <h3 class="font-['Oswald'] text-white text-xl font-semibold mb-2 group-hover:text-[#08D665] transition-colors duration-300">
+                 C Programming for Beginners
+               </h3>
 
-            <!-- UI/UX Design -->
-            <div class="group p-4 md:p-6 bg-[#1C1E29] rounded-lg hover:bg-[#08D665] transform hover:-translate-y-2 transition-all duration-300">
-              <div class="mb-4">
-                <i class="fas fa-paint-brush text-4xl text-[#08D665] group-hover:text-white transition-colors duration-300"></i>
-              </div>
-              <h3 class="text-white text-xl font-semibold mb-3">UI/UX Design</h3>
-              <p class="text-gray-400 group-hover:text-white/90 text-sm transition-colors duration-300">
-                Beautiful and intuitive user experiences.
-              </p>
+               <p class="font-['Rubik'] text-gray-400 text-sm group-hover:text-white/90 transition-colors duration-300">
+                 This guide provides a concise introduction to C programming for beginners, covering basic syntax, concepts, and practical coding examples.
+               </p>
+             </div>
+
+           </div>
+         </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="bg-black py-12 sm:py-16 md:py-20 overflow-hidden relative">
+      <!-- Top decorative line -->
+      <div
+        class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#00ff62] to-transparent"
+      ></div>
+
+      <div class="container mx-auto px-4 sm:px-6 md:px-8 lg:px-24 xl:px-32">
+        <!-- Header -->
+        <div class="mb-24">
+          <h4
+            class="text-[#00ff62] text-sm uppercase tracking-widest mb-3 font-['Rubik']"
+          >
+            Testimonials
+          </h4>
+          <div class="flex items-center gap-8">
+            <h2
+              class="text-white text-5xl font-bold whitespace-nowrap leading-tight font-['Oswald']"
+            >
+              Happy Wisher <span class="text-[#00ff62]">Says</span>
+            </h2>
+            <!-- Vertical Line -->
+            <div class="w-px h-16 bg-[#00ff62]"></div>
+            <!-- Right side text -->
+            <p class="text-white/80 text-xl max-w-md">
+              A passionate educator and programmer, always striving to share
+              knowledge and inspire future tech enthusiasts.
+            </p>
+            <!-- Navigation Arrows -->
+            <div class="ml-auto flex gap-4">
+              <button
+                class="w-12 h-12 border border-[#00ff62] rounded-sm flex items-center justify-center group hover:bg-[#00ff62] transition-colors"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6 text-[#00ff62] group-hover:text-black"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M15 19l-7-7 7-7"
+                  />
+                </svg>
+              </button>
+              <button
+                class="w-12 h-12 border border-[#00ff62] rounded-sm flex items-center justify-center group hover:bg-[#00ff62] transition-colors"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6 text-[#00ff62] group-hover:text-black"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </button>
             </div>
           </div>
+        </div>
+
+        <!-- Testimonial Content -->
+        <div class="relative max-w-5xl mx-auto">
+          <!-- Content -->
+          <div class="flex items-start gap-12">
+            <!-- Profile Image -->
+            <div class="w-32 h-32 flex-shrink-0 mr-12">
+              <img
+                src="./Ramim Ahmed.png"
+                alt="Client"
+                class="w-full h-full object-cover rounded-full border-2 border-[#00ff62]"
+              />
+            </div>
+
+            <!-- Testimonial Text -->
+            <div class="flex-1 relative">
+              <!-- Large Quote Mark -->
+              <div class="absolute -left-[70px] -top-16">
+                <span
+                  class="text-[#00ff62] text-[200px] leading-none opacity-20 font-serif"
+                  >"</span
+                >
+              </div>
+
+              <p
+                class="text-white text-4xl font-light leading-tight mb-8 font-['Oswald'] justify-center align-middle"
+              >
+                GILROY IS A GREAT AND SUPER-PROFESSIONAL SERVICE PROVIDER, WHICH
+                BROUGHT NEW TECHNOLOGIES, NEW METHODOLOGY, AND A FRESH
+                PERSPECTIVE TO OUR PROJECT
+              </p>
+
+              <div>
+                <h3 class="text-[#00ff62] text-2xl font-medium mb-2">
+                  Jack Metiyo Shina
+                </h3>
+                <p class="text-gray-400 text-lg">NYC, USA</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom decorative line -->
+      <div
+        class="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#00ff62] to-transparent"
+      ></div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="bg-black min-h-screen py-20" id="Contact">
+      <div class="container mx-auto px-4 max-w-3xl">
+        <!-- Title Section -->
+        <div class="text-center mb-12">
+          <h4 class="text-[#00ff62] text-sm uppercase tracking-[0.2em] mb-3">
+            Get In Touch
+          </h4>
+          <h2 class="text-white text-[56px] font-bold leading-tight mb-4">
+            Let's Work <span class="text-[#00ff62]">Together</span>
+          </h2>
+          <p class="text-white/80 text-xl max-w-2xl mx-auto">
+            Have a project in mind? Looking to partner or work together? Reach
+            out through the form below.
+          </p>
+        </div>
+
+        <!-- Form Container -->
+        <div
+          class="bg-[#0D1117]/80 backdrop-blur-sm p-8 rounded-2xl border border-gray-800"
+        >
+          <form class="space-y-6">
+            <!-- Name Fields Row -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="space-y-2">
+                <label for="firstName" class="block text-gray-300 text-sm"
+                  >First Name*</label
+                >
+                <input
+                  type="text"
+                  id="firstName"
+                  placeholder="Jane"
+                  class="w-full bg-gray-700/50 text-white px-4 py-3 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 placeholder-gray-500"
+                />
+              </div>
+              <div class="space-y-2">
+                <label for="lastName" class="block text-gray-300 text-sm"
+                  >Last Name*</label
+                >
+                <input
+                  type="text"
+                  id="lastName"
+                  placeholder="Doe"
+                  class="w-full bg-gray-700/50 text-white px-4 py-3 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 placeholder-gray-500"
+                />
+              </div>
+            </div>
+
+            <!-- Company Name -->
+            <div class="space-y-2">
+              <label for="company" class="block text-gray-300 text-sm"
+                >Company Name</label
+              >
+              <input
+                type="text"
+                id="company"
+                placeholder="Company"
+                class="w-full bg-gray-700/50 text-white px-4 py-3 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 placeholder-gray-500"
+              />
+            </div>
+
+            <!-- Email -->
+            <div class="space-y-2">
+              <label for="email" class="block text-gray-300 text-sm"
+                >Email*</label
+              >
+              <input
+                type="email"
+                id="email"
+                placeholder="jane@example.com"
+                class="w-full bg-gray-700/50 text-white px-4 py-3 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 placeholder-gray-500"
+              />
+            </div>
+
+            <!-- Website and Phone Row -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="space-y-2">
+                <label for="website" class="block text-gray-300 text-sm"
+                  >Website*</label
+                >
+                <input
+                  type="url"
+                  id="website"
+                  placeholder="https://"
+                  class="w-full bg-gray-700/50 text-white px-4 py-3 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 placeholder-gray-500"
+                />
+              </div>
+              <div class="space-y-2">
+                <label for="phone" class="block text-gray-300 text-sm"
+                  >Phone*</label
+                >
+                <input
+                  type="tel"
+                  id="phone"
+                  placeholder="(000) 000 0000"
+                  class="w-full bg-gray-700/50 text-white px-4 py-3 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 placeholder-gray-500"
+                />
+              </div>
+            </div>
+
+            <!-- Submit Button -->
+            <button
+              type="submit"
+              class="w-full bg-[#00FF62] text-white py-3 rounded-md hover:bg-transparent hover:text-[#00FF62] hover:border hover:border-[#00FF62] transition-all duration-300 mt-4"
+            >
+              Inquire
+            </button>
+          </form>
         </div>
       </div>
     </section>
 
     <!-- Footer Section -->
+
     <footer class="bg-[#13151F] py-12 sm:py-16 md:py-20">
       <div class="container mx-auto px-4 sm:px-6 md:px-8 lg:px-24 xl:px-32">
         <!-- Logo and Social Media -->
-        <div class="flex flex-col md:flex-row justify-center md:justify-between items-center gap-6 md:gap-0 mb-8 md:mb-16">
+        <div
+          class="flex flex-col md:flex-row justify-center md:justify-between items-center gap-6 md:gap-0 mb-8 md:mb-16"
+        >
           <!-- Logo -->
-          <a href="#" class="text-center md:text-left">
+          <a
+            href="#"
+            class="text-center md:text-left text-['Oswald'] text-5xl mr-2"
+          >
             <span class="text-white text-2xl font-bold flex items-center">
-              <i class="fas fa-play-circle text-[#08D665] text-3xl mr-2"></i>
-              VIDEOGRAPH
+              RAMU
             </span>
           </a>
 
           <!-- Social Media Icons -->
           <div class="flex flex-wrap justify-center gap-4">
-            <a href="#" class="w-10 h-10 bg-[#1C1E29] rounded-full flex items-center justify-center text-gray-400 hover:text-white hover:bg-[#08D665] transition-all duration-300">
+            <a
+              href="#"
+              class="w-10 h-10 bg-[#1C1E29] rounded-full flex items-center justify-center text-gray-400 hover:text-white hover:bg-[#08D665] transition-all duration-300"
+            >
               <i class="fab fa-facebook-f"></i>
             </a>
-            <a href="#" class="w-10 h-10 bg-[#1C1E29] rounded-full flex items-center justify-center text-gray-400 hover:text-white hover:bg-[#08D665] transition-all duration-300">
+            <a
+              href="#"
+              class="w-10 h-10 bg-[#1C1E29] rounded-full flex items-center justify-center text-gray-400 hover:text-white hover:bg-[#08D665] transition-all duration-300"
+            >
               <i class="fab fa-twitter"></i>
             </a>
-            <a href="#" class="w-10 h-10 bg-[#1C1E29] rounded-full flex items-center justify-center text-gray-400 hover:text-white hover:bg-[#08D665] transition-all duration-300">
+            <a
+              href="#"
+              class="w-10 h-10 bg-[#1C1E29] rounded-full flex items-center justify-center text-gray-400 hover:text-white hover:bg-[#08D665] transition-all duration-300"
+            >
               <i class="fab fa-google-plus-g"></i>
             </a>
-            <a href="#" class="w-10 h-10 bg-[#1C1E29] rounded-full flex items-center justify-center text-gray-400 hover:text-white hover:bg-[#08D665] transition-all duration-300">
+            <a
+              href="#"
+              class="w-10 h-10 bg-[#1C1E29] rounded-full flex items-center justify-center text-gray-400 hover:text-white hover:bg-[#08D665] transition-all duration-300"
+            >
               <i class="fab fa-instagram"></i>
             </a>
-            <a href="#" class="w-10 h-10 bg-[#1C1E29] rounded-full flex items-center justify-center text-gray-400 hover:text-white hover:bg-[#08D665] transition-all duration-300">
+            <a
+              href="#"
+              class="w-10 h-10 bg-[#1C1E29] rounded-full flex items-center justify-center text-gray-400 hover:text-white hover:bg-[#08D665] transition-all duration-300"
+            >
               <i class="fab fa-youtube"></i>
             </a>
           </div>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 md:gap-12"
+        >
           <!-- About Us Column -->
           <div class="space-y-6">
-            <h3 class="text-white text-xl font-semibold mb-6">About us</h3>
-            <p class="text-gray-400 text-sm leading-relaxed">
-              Formed in 2006 by Matt Hobbs and Cael Jones, Videoprah is an award-winning, full-service production company specializing.
+            <h3 class="text-white text-xl font-semibold mb-6">About Me</h3>
+            <p
+              class="text-gray-400 text-sm leading-relaxed font-['Rubik'] justify-center align-middle"
+            >
+              I'm Ramim Ahmed, a passionate Computer Science and Engineering
+              student at Metropolitan University, driven by a love for
+              technology, problem-solving, and innovation.
             </p>
-            <a href="#" class="text-gray-400 hover:text-[#08D665] transition-colors duration-300 inline-flex items-center text-sm">
-              Read more 
+            <a
+              href="#"
+              class="text-gray-400 hover:text-[#08D665] transition-colors duration-300 inline-flex items-center text-sm"
+            >
+              Read more
               <i class="fas fa-arrow-right ml-2 text-xs"></i>
             </a>
           </div>
@@ -470,16 +1151,32 @@
             <h3 class="text-white text-xl font-semibold mb-6">Who we are</h3>
             <ul class="space-y-3">
               <li>
-                <a href="#" class="text-gray-400 hover:text-[#08D665] transition-colors duration-300 text-sm">Team</a>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-[#08D665] transition-colors duration-300 text-sm"
+                  >Team</a
+                >
               </li>
               <li>
-                <a href="#" class="text-gray-400 hover:text-[#08D665] transition-colors duration-300 text-sm">Careers</a>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-[#08D665] transition-colors duration-300 text-sm"
+                  >Careers</a
+                >
               </li>
               <li>
-                <a href="#" class="text-gray-400 hover:text-[#08D665] transition-colors duration-300 text-sm">Contact us</a>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-[#08D665] transition-colors duration-300 text-sm"
+                  >Contact us</a
+                >
               </li>
               <li>
-                <a href="#" class="text-gray-400 hover:text-[#08D665] transition-colors duration-300 text-sm">Locations</a>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-[#08D665] transition-colors duration-300 text-sm"
+                  >Locations</a
+                >
               </li>
             </ul>
           </div>
@@ -489,16 +1186,32 @@
             <h3 class="text-white text-xl font-semibold mb-6">Our work</h3>
             <ul class="space-y-3">
               <li>
-                <a href="#" class="text-gray-400 hover:text-[#08D665] transition-colors duration-300 text-sm">Feature</a>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-[#08D665] transition-colors duration-300 text-sm"
+                  >Feature</a
+                >
               </li>
               <li>
-                <a href="#" class="text-gray-400 hover:text-[#08D665] transition-colors duration-300 text-sm">Latest</a>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-[#08D665] transition-colors duration-300 text-sm"
+                  >Latest</a
+                >
               </li>
               <li>
-                <a href="#" class="text-gray-400 hover:text-[#08D665] transition-colors duration-300 text-sm">Browse Archive</a>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-[#08D665] transition-colors duration-300 text-sm"
+                  >Browse Archive</a
+                >
               </li>
               <li>
-                <a href="#" class="text-gray-400 hover:text-[#08D665] transition-colors duration-300 text-sm">Video for web</a>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-[#08D665] transition-colors duration-300 text-sm"
+                  >Video for web</a
+                >
               </li>
             </ul>
           </div>
@@ -507,15 +1220,18 @@
           <div class="space-y-6">
             <h3 class="text-white text-xl font-semibold mb-6">Newsletter</h3>
             <p class="text-gray-400 text-sm leading-relaxed">
-              Videoprah is an award-winning, full-service production company specializing.
+              Videoprah is an award-winning, full-service production company
+              specializing.
             </p>
             <div class="flex flex-col sm:flex-row gap-4">
-              <input 
-                type="email" 
-                placeholder="Email" 
+              <input
+                type="email"
+                placeholder="Email"
                 class="w-full sm:flex-1 bg-[#1C1E29] text-gray-400 px-4 py-3 rounded focus:outline-none focus:ring-1 focus:ring-[#08D665]"
+              />
+              <button
+                class="w-full sm:w-auto bg-[#08D665] px-6 py-3 rounded hover:bg-[#07bf59] transition-colors duration-300"
               >
-              <button class="w-full sm:w-auto bg-[#08D665] px-6 py-3 rounded hover:bg-[#07bf59] transition-colors duration-300">
                 <i class="fas fa-paper-plane text-white"></i>
               </button>
             </div>
@@ -523,12 +1239,18 @@
         </div>
 
         <!-- Copyright Section -->
-        <div class="mt-12 md:mt-16 pt-8 border-t border-gray-800 text-center text-gray-400 text-sm">
+        <div
+          class="mt-12 md:mt-16 pt-8 border-t border-gray-800 text-center text-gray-400 text-sm"
+        >
           <p>
-            Copyright © 2025 All rights reserved | This template is made with 
-            <i class="fas fa-heart text-[#08D665] mx-1"></i> 
-            by 
-            <a href="#" class="text-[#08D665] hover:text-white transition-colors duration-300">Colorlib</a>
+            Copyright © 2025 All rights reserved | This template is made with
+            <i class="fas fa-heart text-[#08D665] mx-1"></i>
+            by
+            <a
+              href="#"
+              class="text-[#08D665] hover:text-white transition-colors duration-300"
+              >@ramimahmed</a
+            >
           </p>
         </div>
       </div>
