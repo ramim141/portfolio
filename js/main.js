@@ -1,14 +1,14 @@
 // Mobile menu functionality
-const menuButton = document.getElementById('menu-button');
+const mobileMenuButton = document.getElementById('mobile-menu-button');
 const mobileMenu = document.getElementById('mobile-menu');
 
-menuButton.addEventListener('click', () => {
+mobileMenuButton.addEventListener('click', () => {
     mobileMenu.classList.toggle('hidden');
 });
 
 // Close mobile menu when clicking outside
 document.addEventListener('click', (e) => {
-    if (!mobileMenu.contains(e.target) && !menuButton.contains(e.target)) {
+    if (!mobileMenu.contains(e.target) && !mobileMenuButton.contains(e.target)) {
         mobileMenu.classList.add('hidden');
     }
 });
@@ -86,3 +86,6 @@ function updateHeadline(direction) {
 // Add click event listeners to arrows
 leftArrow.addEventListener('click', () => updateHeadline('left'));
 rightArrow.addEventListener('click', () => updateHeadline('right'));
+
+
+
