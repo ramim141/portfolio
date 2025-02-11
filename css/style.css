@@ -27,3 +27,28 @@ html {
     text-overflow: ellipsis;
     white-space: nowrap;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&display=swap');
+
+.nav-link {
+    @apply text-white hover:text-[#08D665] transition-colors duration-300 uppercase text-xs lg:text-sm tracking-wider relative py-2 px-3;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #08D665;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.mobile-nav-link {
+    @apply block text-white hover:text-[#08D665] transition-colors duration-300 uppercase text-sm tracking-wider py-2 px-4;
+}
