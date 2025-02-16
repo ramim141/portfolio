@@ -52,3 +52,4 @@ html {
 .mobile-nav-link {
     @apply block text-white hover:text-[#08D665] transition-colors duration-300 uppercase text-sm tracking-wider py-2 px-4;
 }
+
