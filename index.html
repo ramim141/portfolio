@@ -23,9 +23,9 @@
   </head>
   <body class="font-sans bg-black">
     <nav class="fixed w-full z-50 transition-colors duration-300" id="navbar">
-      <!-- Top Bar - Hidden on mobile -->
-      <div class="hidden md:block bg-[#09122C] py-2 container ">
-        <div class="max-w-7xl mx-auto px-4">
+      <!-- Top Bar - Hidden on mobile and when scrolling -->
+      <div class="hidden md:block bg-[#09122C] py-2 container" id="top-bar">
+        <div class="max-w-7xl mx-auto px-4" id="home">
           <div class="flex justify-between items-center">
             <!-- Left Side -->
             <div class="flex items-center">
@@ -78,10 +78,16 @@
 
             <!-- Main Menu (hidden on mobile) -->
             <div class="hidden md:flex items-center space-x-1 lg:space-x-4">
-              <a href="#home" class="relative py-2 text-white hover:text-[#08D665] transition-colors duration-300 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#08D665] after:transition-all after:duration-300 hover:after:w-full">Home</a>
+              <!-- Home -->
+              <a href="#hero" class="relative py-2 text-white hover:text-[#08D665] transition-colors duration-300 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#08D665] after:transition-all after:duration-300 hover:after:w-full">Home</a>
+              <!-- About -->
               <a href="#about" class="relative py-2 text-white hover:text-[#08D665] transition-colors duration-300 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#08D665] after:transition-all after:duration-300 hover:after:w-full">About</a>
               <a href="#projects" class="relative py-2 text-white hover:text-[#08D665] transition-colors duration-300 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#08D665] after:transition-all after:duration-300 hover:after:w-full">Projects</a>
               <a href="#skills" class="relative py-2 text-white hover:text-[#08D665] transition-colors duration-300 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#08D665] after:transition-all after:duration-300 hover:after:w-full">Skills</a>
+              <a href="#testimonials" class="relative py-2 text-white hover:text-[#08D665] transition-colors duration-300 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#08D665] after:transition-all after:duration-300 hover:after:w-full">Testimonials</a>
+              <a href="#coding" class="relative py-2 text-white hover:text-[#08D665] transition-colors duration-300 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#08D665] after:transition-all after:duration-300 hover:after:w-full">Coding</a>
+              <a href="#training" class="relative py-2 text-white hover:text-[#08D665] transition-colors duration-300 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#08D665] after:transition-all after:duration-300 hover:after:w-full">Training</a>
+              <a href="#Contact" class="relative py-2 text-white hover:text-[#08D665] transition-colors duration-300 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#08D665] after:transition-all after:duration-300 hover:after:w-full">Contact</a>
               <a href="https://medium.com/@ahramu584" class="relative py-2 text-white hover:text-[#08D665] transition-colors duration-300 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#08D665] after:transition-all after:duration-300 hover:after:w-full">Blog</a>
             </div>
 
@@ -114,11 +120,16 @@
         <!-- Mobile Menu (hidden by default) -->
         <div class="hidden md:hidden" id="mobile-menu">
           <div class="px-2 pt-2 pb-3 space-y-1 flex flex-col">
-            <a href="#home" class="text-white hover:text-[#08D665] transition-colors duration-300 py-2">Home</a>
+            <!-- Home -->
+            <a href="#hero" class="text-white hover:text-[#08D665] transition-colors duration-300 py-2">Home</a>
+            <!-- About -->
             <a href="#about" class="text-white hover:text-[#08D665] transition-colors duration-300 py-2">About</a>
+            <!-- Skills -->
             <a href="#skills" class="text-white hover:text-[#08D665] transition-colors duration-300 py-2">Skills</a>
             <a href="#projects" class="text-white hover:text-[#08D665] transition-colors duration-300 py-2">Projects</a>
             <a href="#Contact" class="text-white hover:text-[#08D665] transition-colors duration-300 py-2">Contact</a>
+            <a href="#testimonials" class="text-white hover:text-[#08D665] transition-colors duration-300 py-2">Testimonials</a>
+            <a href="#coding" class="text-white hover:text-[#08D665] transition-colors duration-300 py-2">Coding</a>
             <a href="https://medium.com/@ahramu584" class="text-white hover:text-[#08D665] transition-colors duration-300 py-2">Blog</a>
           </div>
         </div>
@@ -126,7 +137,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="min-h-screen bg-[url('./background.jpg')] bg-cover bg-center flex items-center pt-20 md:pt-32">
+    <section id="hero" class="min-h-screen bg-[url('./background.jpg')] bg-cover bg-center flex items-center pt-20 md:pt-32">
       <div class="container mx-auto px-4 sm:px-6 md:px-8 lg:px-24 xl:px-32">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center" >
           <!-- Left Content -->
@@ -322,7 +333,7 @@
     </section>
 
     <!-- Skills Section -->
-    <section class="bg-[#0B192C] py-16 px-4">
+    <section id="skills" class="bg-[#0B192C] py-16 px-4">
       <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
         <!-- Section Header -->
         <div class="text-center mb-8 sm:mb-12 lg:mb-16">
@@ -410,7 +421,7 @@
     </section>
 
     <!-- Competitive Programming Section -->
-    <section class="container mx-auto px-4 sm:px-6 md:px-8 lg:px-20 xl:px-32 flex flex-col mb-20 mt-20">
+    <section id="coding" class="container mx-auto px-4 sm:px-6 md:px-8 lg:px-20 xl:px-32 flex flex-col mb-20 mt-20">
       <!-- Section Title -->
       <h2 class="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-[#08D665] mb-4 sm:mb-6 md:mb-8 lg:mb-10 font-['Oswald','sans-serif'] flex flex-col sm:flex-row items-center justify-center text-center gap-2 sm:gap-3">
           <img src="./coding (2).png" alt="Competitive Programming" class="w-8 sm:w-10 md:w-12 lg:w-14 xl:w-16 h-auto object-contain">
@@ -613,7 +624,7 @@
 
   
     <!-- Training and Course Section -->
-    <section class="bg-[#09122C] py-12 sm:py-16 md:py-20">
+    <section id="training" class="bg-[#09122C] py-12 sm:py-16 md:py-20">
       <div class="container mx-auto px-4 sm:px-6 md:px-8 lg:px-24 xl:px-32">
       <h2 class="text-3xl sm:text-4xl font-bold text-center text-[#08D665] mb-8 font-['Oswald']">
         <i class="fas fa-book-open mr-2"></i> TRAINING AND COURSES
@@ -885,113 +896,113 @@
       </div>
     </section>
 
-<!-- Testimonials Section -->
-<section class="bg-black py-8 sm:py-12 md:py-16 lg:py-20 xl:py-24 overflow-hidden relative">
-  <!-- Top decorative line -->
-  <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#00ff62] to-transparent"></div>
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="bg-black py-8 sm:py-12 md:py-16 lg:py-20 xl:py-24 overflow-hidden relative">
+      <!-- Top decorative line -->
+      <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#00ff62] to-transparent"></div>
 
-  <div class="container mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12">
-    <!-- Header -->
-    <div class="mb-8 md:mb-12">
-      <h4 class="text-[#00ff62] text-sm uppercase tracking-[0.2em] mb-2 md:mb-3">Testimonials</h4>
-      <div class="flex flex-col md:flex-row items-start gap-4 md:gap-8">
-        <h2 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold font-['Oswald']">
-          Happy Wisher <span class="text-[#00ff62]">Says</span>
-        </h2>
-        <div class="hidden md:block w-px h-12 md:h-16 bg-[#00ff62] mx-4 md:mx-8"></div>
-        <p class="text-white/70 text-base md:text-lg lg:text-xl max-w-xl">
-          A passionate educator and programmer, always striving to share knowledge and inspire future tech enthusiasts.
-        </p>
-      </div>
-    </div>
-
-    <!-- Testimonial Slider -->
-    <div class="relative max-w-6xl mx-auto">
-      <div class="slider">
-            <!-- Testimonial 1 -->
-        <div class="testimonial active sm:ml-[-20px]" data-testimonial="1">
-          <div class="flex flex-col md:flex-row items-center md:items-start gap-4 md:gap-8">
-            <div class="w-24 h-24 md:w-32 md:h-32 lg:w-40 lg:h-40 flex-shrink-0">
-              <img src="./about.png" alt="Testimonial Author" class="w-full h-full object-cover rounded-full border-2 border-[#00ff62]">
-            </div>
-            <div class="flex-1">
-              <div class="relative">
-                <img class="w-8 ml-[-8px] sm:ml-[-20px]" src="./quote.png" alt="">
-                <p class="text-white text-lg md:text-xl lg:text-2xl font-light leading-relaxed mb-4 md:mb-6">
-                  GILROY IS A GREAT AND SUPER-PROFESSIONAL SERVICE PROVIDER, WHICH BROUGHT NEW TECHNOLOGIES, NEW METHODOLOGY, AND A FRESH PERSPECTIVE TO OUR PROJECT.
-                </p>
-              </div>
-              <div class="mt-4 md:mt-6">
-                <h3 class="text-[#00ff62] text-xl md:text-2xl font-medium mb-1">Jack Metiyo Shina</h3>
-                <p class="text-gray-400 text-base md:text-lg">NYC, USA</p>
-              </div>
-            </div>
+      <div class="container mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12">
+        <!-- Header -->
+        <div class="mb-8 md:mb-12">
+          <h4 class="text-[#00ff62] text-sm uppercase tracking-[0.2em] mb-2 md:mb-3">Testimonials</h4>
+          <div class="flex flex-col md:flex-row items-start gap-4 md:gap-8">
+            <h2 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold font-['Oswald']">
+              Happy Wisher <span class="text-[#00ff62]">Says</span>
+            </h2>
+            <div class="hidden md:block w-px h-12 md:h-16 bg-[#00ff62] mx-4 md:mx-8"></div>
+            <p class="text-white/70 text-base md:text-lg lg:text-xl max-w-xl">
+              A passionate educator and programmer, always striving to share knowledge and inspire future tech enthusiasts.
+            </p>
           </div>
         </div>
 
-        <!-- Testimonial 2 -->
-        <div class="testimonial hidden sm:ml-[-20px]" data-testimonial="2">
-          <div class="flex flex-col md:flex-row items-center md:items-start gap-4 md:gap-8">
-            <div class="w-24 h-24 md:w-32 md:h-32 lg:w-40 lg:h-40 flex-shrink-0">
-              <img src="./about.png" alt="Testimonial Author" class="w-full h-full object-cover rounded-full border-2 border-[#00ff62]">
-            </div>
-            <div class="flex-1">
-              <div class="relative">
-                <img class="w-8 ml-[-8px] sm:ml-[-20px]" src="./quote.png" alt="">
-                <p class="text-white text-lg md:text-xl lg:text-2xl font-light leading-relaxed mb-4 md:mb-6">
-                  RAMIM IS A QUICK LEARNER AND AN INNOVATIVE THINKER. HIS PROBLEM-SOLVING SKILLS AND WILLINGNESS TO EXPLORE NEW TECHNOLOGIES MAKE HIM A STANDOUT IN THE FIELD.
-                </p>
+        <!-- Testimonial Slider -->
+        <div class="relative max-w-6xl mx-auto">
+          <div class="slider">
+                <!-- Testimonial 1 -->
+            <div class="testimonial active sm:ml-[-20px]" data-testimonial="1">
+              <div class="flex flex-col md:flex-row items-center md:items-start gap-4 md:gap-8">
+                <div class="w-24 h-24 md:w-32 md:h-32 lg:w-40 lg:h-40 flex-shrink-0">
+                  <img src="./about.png" alt="Testimonial Author" class="w-full h-full object-cover rounded-full border-2 border-[#00ff62]">
+                </div>
+                <div class="flex-1">
+                  <div class="relative">
+                    <img class="w-8 ml-[-8px] sm:ml-[-20px]" src="./quote.png" alt="">
+                    <p class="text-white text-lg md:text-xl lg:text-2xl font-light leading-relaxed mb-4 md:mb-6">
+                      GILROY IS A GREAT AND SUPER-PROFESSIONAL SERVICE PROVIDER, WHICH BROUGHT NEW TECHNOLOGIES, NEW METHODOLOGY, AND A FRESH PERSPECTIVE TO OUR PROJECT.
+                    </p>
+                  </div>
+                  <div class="mt-4 md:mt-6">
+                    <h3 class="text-[#00ff62] text-xl md:text-2xl font-medium mb-1">Jack Metiyo Shina</h3>
+                    <p class="text-gray-400 text-base md:text-lg">NYC, USA</p>
+                  </div>
+                </div>
               </div>
-              <div class="mt-4 md:mt-6">
-                <h3 class="text-[#00ff62] text-xl md:text-2xl font-medium mb-1">ABC</h3>
-                <p class="text-gray-400 text-base md:text-lg">Engineering Student</p>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="testimonial hidden sm:ml-[-20px]" data-testimonial="2">
+              <div class="flex flex-col md:flex-row items-center md:items-start gap-4 md:gap-8">
+                <div class="w-24 h-24 md:w-32 md:h-32 lg:w-40 lg:h-40 flex-shrink-0">
+                  <img src="./about.png" alt="Testimonial Author" class="w-full h-full object-cover rounded-full border-2 border-[#00ff62]">
+                </div>
+                <div class="flex-1">
+                  <div class="relative">
+                    <img class="w-8 ml-[-8px] sm:ml-[-20px]" src="./quote.png" alt="">
+                    <p class="text-white text-lg md:text-xl lg:text-2xl font-light leading-relaxed mb-4 md:mb-6">
+                      RAMIM IS A QUICK LEARNER AND AN INNOVATIVE THINKER. HIS PROBLEM-SOLVING SKILLS AND WILLINGNESS TO EXPLORE NEW TECHNOLOGIES MAKE HIM A STANDOUT IN THE FIELD.
+                    </p>
+                  </div>
+                  <div class="mt-4 md:mt-6">
+                    <h3 class="text-[#00ff62] text-xl md:text-2xl font-medium mb-1">ABC</h3>
+                    <p class="text-gray-400 text-base md:text-lg">Engineering Student</p>
+                  </div>
+                </div>
               </div>
             </div>
+
+            <!-- Testimonial 3 -->
+            <div class="testimonial hidden sm:ml-[-20px]" data-testimonial="3">
+              <div class="flex flex-col md:flex-row items-center md:items-start gap-4 md:gap-8">
+                <div class="w-24 h-24 md:w-32 md:h-32 lg:w-40 lg:h-40 flex-shrink-0">
+                  <img src="./about.png" alt="Testimonial Author" class="w-full h-full object-cover rounded-full border-2 border-[#00ff62]">
+                </div>
+                <div class="flex-1">
+                  <div class="relative">
+                    <img class="w-8 ml-[-8px] sm:ml-[-20px]" src="./quote.png" alt="">
+                    <p class="text-white text-lg md:text-xl lg:text-2xl font-light leading-relaxed mb-4 md:mb-6">
+                      THE COMPETITIVE PROGRAMMING GUIDANCE HAS HELPED ME IMPROVE MY PROBLEM-SOLVING SKILLS. I'M NOW MORE CONFIDENT IN TACKLING COMPLEX ALGORITHMIC CHALLENGES.
+                    </p>
+                  </div>
+                  <div class="mt-4 md:mt-6">
+                    <h3 class="text-[#00ff62] text-xl md:text-2xl font-medium mb-1">Rahul Kumar</h3>
+                    <p class="text-gray-400 text-base md:text-lg">Competitive Programmer</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Navigation Buttons -->
+          <div class="flex justify-center md:justify-end gap-2 md:gap-4 mt-8 md:mt-12">
+            <button id="prevBtn" class="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-none border border-[#00ff62] text-[#00ff62] hover:bg-[#00ff62]/10 transition-colors" aria-label="Previous">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m15 18-6-6 6-6"/>
+              </svg>
+            </button>
+            <button id="nextBtn" class="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-none border border-[#00ff62] text-[#00ff62] hover:bg-[#00ff62]/10 transition-colors" aria-label="Next">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m9 18 6-6-6-6"/>
+              </svg>
+            </button>
           </div>
         </div>
-
-        <!-- Testimonial 3 -->
-        <div class="testimonial hidden sm:ml-[-20px]" data-testimonial="3">
-          <div class="flex flex-col md:flex-row items-center md:items-start gap-4 md:gap-8">
-            <div class="w-24 h-24 md:w-32 md:h-32 lg:w-40 lg:h-40 flex-shrink-0">
-              <img src="./about.png" alt="Testimonial Author" class="w-full h-full object-cover rounded-full border-2 border-[#00ff62]">
-            </div>
-            <div class="flex-1">
-              <div class="relative">
-                <img class="w-8 ml-[-8px] sm:ml-[-20px]" src="./quote.png" alt="">
-                <p class="text-white text-lg md:text-xl lg:text-2xl font-light leading-relaxed mb-4 md:mb-6">
-                  THE COMPETITIVE PROGRAMMING GUIDANCE HAS HELPED ME IMPROVE MY PROBLEM-SOLVING SKILLS. I'M NOW MORE CONFIDENT IN TACKLING COMPLEX ALGORITHMIC CHALLENGES.
-                </p>
-              </div>
-              <div class="mt-4 md:mt-6">
-                <h3 class="text-[#00ff62] text-xl md:text-2xl font-medium mb-1">Rahul Kumar</h3>
-                <p class="text-gray-400 text-base md:text-lg">Competitive Programmer</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
       </div>
 
-      <!-- Navigation Buttons -->
-      <div class="flex justify-end gap-2 md:gap-4 mt-8 md:mt-12">
-        <button id="prevBtn" class="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-none border border-[#00ff62] text-[#00ff62] hover:bg-[#00ff62]/10 transition-colors" aria-label="Previous">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="m15 18-6-6 6-6"/>
-          </svg>
-        </button>
-        <button id="nextBtn" class="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-none border border-[#00ff62] text-[#00ff62] hover:bg-[#00ff62]/10 transition-colors" aria-label="Next">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="m9 18 6-6-6-6"/>
-          </svg>
-        </button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Bottom decorative line -->
-  <div class="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#00ff62] to-transparent"></div>
-</section>
+      <!-- Bottom decorative line -->
+      <div class="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#00ff62] to-transparent"></div>
+    </section>
   
 
 
@@ -1212,9 +1223,9 @@
     
     <!-- JavaScript for Testimonial Slider -->
      <script src="./js/codechef.js"></script>
-
      <script src="./js/coding.js"></script>
      <script src="./js/leetcode.js"></script>
+     <script src="./js/main.js"></script>
 
   </body>
 </html>
