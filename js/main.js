@@ -105,17 +105,6 @@ document.addEventListener("DOMContentLoaded", function () {
     mobileMenu.classList.toggle("hidden");
   });
 
-  // Change navbar background on scroll
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 0) {
-      navbar.classList.add("bg-[#09122C]");
-      navbar.classList.remove("bg-transparent");
-    } else {
-      navbar.classList.remove("bg-[#09122C]");
-      navbar.classList.add("bg-transparent");
-    }
-  });
-
   // Smooth scrolling for anchor links
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", function (e) {
@@ -125,6 +114,47 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
   });
+
+  // Project filtering
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  const projectCards = document.querySelectorAll('.project-card');
+
+  filterButtons.forEach(btn => {
+    btn.addEventListener('click', function () {
+      // Remove active styles from all buttons
+      filterButtons.forEach(b => b.classList.remove('bg-[#08D665]', 'text-white'));
+      filterButtons.forEach(b => b.classList.add('bg-[#1A1A2E]', 'text-gray-200'));
+      // Add active styles to clicked button
+      this.classList.remove('bg-[#1A1A2E]', 'text-gray-200');
+      this.classList.add('bg-[#08D665]', 'text-white');
+
+      const filter = this.getAttribute('data-filter');
+      projectCards.forEach(card => {
+        const categories = card.getAttribute('data-category').split(' ');
+        if (filter === 'all' || categories.includes(filter)) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    });
+  });
+
+  // Set initial active button
+  const initialBtn = document.querySelector('.filter-btn[data-filter="all"]');
+  if (initialBtn) initialBtn.click();
+});
+
+// Navbar background on scroll
+window.addEventListener("scroll", () => {
+  const navbar = document.getElementById("navbar");
+  if (window.scrollY > 0) {
+    navbar.classList.add("bg-[#09122C]");
+    navbar.classList.remove("bg-transparent");
+  } else {
+    navbar.classList.remove("bg-[#09122C]");
+    navbar.classList.add("bg-transparent");
+  }
 });
 
 
