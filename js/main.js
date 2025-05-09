@@ -114,35 +114,6 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
   });
-
-  // Project filtering
-  const filterButtons = document.querySelectorAll('.filter-btn');
-  const projectCards = document.querySelectorAll('.project-card');
-
-  filterButtons.forEach(btn => {
-    btn.addEventListener('click', function () {
-      // Remove active styles from all buttons
-      filterButtons.forEach(b => b.classList.remove('bg-[#08D665]', 'text-white'));
-      filterButtons.forEach(b => b.classList.add('bg-[#1A1A2E]', 'text-gray-200'));
-      // Add active styles to clicked button
-      this.classList.remove('bg-[#1A1A2E]', 'text-gray-200');
-      this.classList.add('bg-[#08D665]', 'text-white');
-
-      const filter = this.getAttribute('data-filter');
-      projectCards.forEach(card => {
-        const categories = card.getAttribute('data-category').split(' ');
-        if (filter === 'all' || categories.includes(filter)) {
-          card.classList.remove('hidden');
-        } else {
-          card.classList.add('hidden');
-        }
-      });
-    });
-  });
-
-  // Set initial active button
-  const initialBtn = document.querySelector('.filter-btn[data-filter="all"]');
-  if (initialBtn) initialBtn.click();
 });
 
 // Navbar background on scroll
@@ -156,5 +127,6 @@ window.addEventListener("scroll", () => {
     navbar.classList.add("bg-transparent");
   }
 });
+
 
 
