@@ -20,103 +20,10 @@
     <script src="https://cdn.tailwindcss.com"></script>
         
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-      /* Testimonial Slider Styles */
-      #testimonial-slider {
-        display: flex;
-        transition: transform 0.5s ease-in-out;
-      }
-      
-      #testimonial-slider > div {
-        flex: 0 0 100%;
-        width: 100%;
-      }
-      
-      .testimonial-dot.active {
-        background-color: #08D665;
-      }
-      
-      /* Hide scrollbar but keep functionality */
-      .overflow-hidden {
-        -ms-overflow-style: none;
-        scrollbar-width: none;
-      }
-      
-      .overflow-hidden::-webkit-scrollbar {
-        display: none;
-      }
-
-      /* Project Modal Styles */
-      .modal-backdrop {
-          background-color: rgba(0, 0, 0, 0.5);
-          backdrop-filter: blur(4px);
-      }
-
-      .modal-content {
-          max-height: 90vh;
-          overflow-y: auto;
-      }
-
-      .modal-content::-webkit-scrollbar {
-          width: 8px;
-      }
-
-      .modal-content::-webkit-scrollbar-track {
-          background: #1a1a1a;
-          border-radius: 4px;
-      }
-
-      .modal-content::-webkit-scrollbar-thumb {
-          background: #08D665;
-          border-radius: 4px;
-      }
-
-      .modal-content::-webkit-scrollbar-thumb:hover {
-          background: #07b857;
-      }
-
-      .modal-close-btn {
-          transition: all 0.3s ease;
-      }
-
-      .modal-close-btn:hover {
-          transform: rotate(90deg);
-          color: #08D665;
-      }
-
-      .modal-image {
-          transition: transform 0.3s ease;
-      }
-
-      .modal-image:hover {
-          transform: scale(1.02);
-      }
-
-      .modal-features li {
-          position: relative;
-          padding-left: 1.5rem;
-      }
-
-      .modal-features li::before {
-          content: "•";
-          color: #08D665;
-          position: absolute;
-          left: 0;
-      }
-
-      .modal-links a {
-          transition: all 0.3s ease;
-      }
-
-      .modal-links a:hover {
-          transform: translateY(-2px);
-      }
-    </style>
+ 
   </head>
   <body class="font-sans bg-black">
     <nav class="fixed w-full z-50 transition-colors duration-300" id="navbar">
-     
-
       <!-- Main Navigation Bar -->
       <div class="bg-transparent backdrop-blur-sm border-b border-gray-800 transition-colors duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-4">
@@ -277,11 +184,11 @@
       <div class="container mx-auto px-4  md:px-8 lg:px-24 xl:px-32">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-start">
             <!-- Left Side - Image -->
-            <div class="relative order-2 lg:order-1  rounded-lg" style="background-image: url('./images/about_bg_33.jpg'); background-size: cover; background-position: center; ">
+            <div class="relative order-2 lg:order-1  rounded-lg" style="background-image: url('./images/about_background.jpg'); background-size: cover; background-position: center; ">
             <img
               src="./images/about pic.png"
               alt="Profile"
-              class="w-full h-[350px] sm:h-[450px] md:h-[500px] lg:h-[600px] object-cover rounded-lg shadow-xl"
+              class="w-full h-[350px] sm:h-[450px] md:h-[500px] lg:h-[600px] object-cover rounded-lg"
             />
             </div>
 
