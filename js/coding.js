@@ -55,7 +55,7 @@ async function fetchCodeforcesData(handle) {
           document.getElementById('cf-rating').innerHTML = `
           <span class="flex items-center justify-between w-full">
               <span class="flex items-center">
-                  <img src="./star.png" class="w-6 h-6 mr-2">
+                  <img src="./images/star.png" class="w-6 h-6 mr-2">
                   Current Rating
               </span>
               <span class="font-semibold ml-auto">${user.rating ?? 'N/A'}</span>
@@ -67,7 +67,7 @@ async function fetchCodeforcesData(handle) {
       document.getElementById('cf-max-rating').innerHTML = `
       <span class="flex items-center justify-between w-full">
           <span class="flex items-center">
-              <img src="./medal.png" class="w-6 h-6 mr-2">
+              <img src="./images/medal.png" class="w-6 h-6 mr-2">
               Max Rating
           </span>
           <span class="font-semibold ml-auto">${user.maxRating ?? 'N/A'}</span>
@@ -78,7 +78,7 @@ async function fetchCodeforcesData(handle) {
     document.getElementById('cf-contests').innerHTML = `
     <span class="flex items-center justify-between w-full">
         <span class="flex items-center">
-                <img src="./trophy.png" class="w-6 h-6 mr-2">
+                <img src="./images/trophy.png" class="w-6 h-6 mr-2">
                 Contests
         </span>
         <span class="font-semibold ml-auto">${contestsCount}</span>
@@ -88,7 +88,7 @@ async function fetchCodeforcesData(handle) {
     document.getElementById('cf-accepted').innerHTML = `
     <span class="flex items-center justify-between w-full">
          <span class="flex items-center">
-                <img src="./check (1).png" class="w-6 h-6 mr-2">
+                <img src="./images/check (1).png" class="w-6 h-6 mr-2">
                 Accepted
         </span>
         <span class="font-semibold ml-auto">${acceptedCount}</span>
@@ -98,7 +98,7 @@ async function fetchCodeforcesData(handle) {
     document.getElementById('cf-wrong').innerHTML = `
     <span class="flex items-center justify-between w-full">
         <span class="flex items-center">
-                <img src="./no.png" class="w-6 h-6 mr-2">
+                <img src="./images/no.png" class="w-6 h-6 mr-2">
                 Wrong
         </span>
         <span class="font-semibold ml-auto">${wrongCount}</span>
@@ -108,7 +108,7 @@ async function fetchCodeforcesData(handle) {
 document.getElementById('cf-contrib').innerHTML = `
 <span class="flex items-center justify-between w-full">
    <span class="flex items-center">
-                <img src="./widget.png" class="w-6 h-6 mr-2">
+                <img src="./images/widget.png" class="w-6 h-6 mr-2">
                 Contribution
         </span>
     <span class="font-semibold ml-auto">${user.contribution ?? 'N/A'}</span>
@@ -119,7 +119,7 @@ document.getElementById('cf-contrib').innerHTML = `
 document.getElementById('cf-total-solved').innerHTML = `
 <span class="flex items-center justify-between w-full">
     <span class="flex items-center">
-            <img src="./solve_prob.png" class="w-6 h-6 mr-2">
+            <img src="./images/solve_prob.png" class="w-6 h-6 mr-2">
             Total Solved
     </span>
     <span class="font-semibold ml-auto">${totalSolved}</span>
