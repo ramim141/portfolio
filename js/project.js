@@ -143,5 +143,42 @@ const projects = {
         ],
         liveLink: '#',
         githubLink: '#'
+    },
+    'quiz-app': {
+        title: 'Quiz App',
+        image: './images/quiz.png',
+        description: 'A quiz application built with Django MVT and Tailwind CSS, featuring a user-friendly interface, multiple-choice questions, and a leaderboard.',
+        technologies: ['Django', 'MVT', 'SQL', 'Tailwind CSS'],
+        features: [
+            'User authentication and authorization',
+            'Multiple-choice questions with randomization',
+            'Leaderboard with score tracking',
+            'Quiz categories and difficulty levels',
+            'User profiles and analytics',
+            'Responsive design for mobile and desktop',
+            'Email notifications for quiz results'
+        ],
+        liveLink: '#',
+        githubLink: '#'
+    },
+    'fashion-fair':{
+        title: 'Fashion Fair',
+        image: './images/fashion-fair.jpg',
+        description: 'A fashion e-commerce website built with React, Redux, and Tailwind CSS, offering a wide range of clothing items, user-friendly interface, and secure payment gateway.',
+        technologies: ['Django', 'DRF', 'Tailwind CSS', 'PostgreSQL'],
+        features:[
+            'User authentication and authorization',
+            'Product catalog with filtering and sorting',
+            'Shopping cart and checkout process',
+            'Secure payment gateway integration',
+            'Responsive design for mobile and desktop',
+            'Product reviews and ratings',
+            'Search functionality for products'
+
+        ],
+        liveLink: '#',
+        githubLink: '#'
     }
+
+
 };
