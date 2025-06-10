@@ -36,7 +36,7 @@
             </a>
 
             <!-- Main Menu (hidden on mobile) -->
-            <div class="hidden md:flex items-center space-x-1 lg:space-x-4">
+            <div class="hidden md:flex items-center space-x-1 lg:space-x-4 ">
               <!-- Home -->
               <a href="#hero" class="relative py-2 text-white hover:text-[#08D665] transition-colors duration-300 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#08D665] after:transition-all after:duration-300 hover:after:w-full">Home</a>
               <!-- About -->
@@ -71,8 +71,8 @@
         </div>
 
         <!-- Mobile Menu (hidden by default) -->
-        <div class="hidden md:hidden" id="mobile-menu">
-          <div class="px-2 pt-2 pb-3 space-y-1 flex flex-col">
+        <div class="hidden" id="mobile-menu">
+          <div class="px-4 pt-2 pb-3 space-y-1 flex flex-col">
             <!-- Home -->
             <a href="#hero" class="text-white hover:text-[#08D665] transition-colors duration-300 py-2">Home</a>
             <!-- About -->
@@ -132,27 +132,24 @@
               </p>
             </div>
             <div class="pt-4 flex flex-col sm:flex-row gap-4 justify-center sm:justify-start">
-              <a
-              href="#"
-              class="group relative inline-flex items-center justify-center bg-[#08D665] text-white px-6 py-3 overflow-hidden transition-all duration-300 hover:bg-transparent hover:text-[#08D665] border border-[#08D665] hover:border-[#08D665] rounded-md"
-              >
-              <span
-              class="relative z-10 text-sm font-medium uppercase tracking-wider"
-              >
-               DOWNLOAD CV
-              </span>
-              <span
-              class="relative z-10 ml-2 transition-transform duration-300 transform group-hover:translate-x-1"
-              >
-              <i class="fas fa-arrow-right text-sm"></i>
-              </span>
+              <a href="#" class="group relative inline-flex items-center justify-center bg-[#08D665] text-white px-6 py-3 overflow-hidden transition-all duration-300 hover:bg-transparent hover:text-[#08D665] border border-[#08D665] hover:border-[#08D665] rounded-md"  >
+                <span class="relative z-10 mr-2">
+                  <i class="fas fa-download text-sm"></i>
+                </span>
+               
+                <span class="relative z-10 text-sm font-medium uppercase tracking-wider"> DOWNLOAD CV </span>
+                <span class="relative z-10 ml-2 transition-transform duration-300 transform group-hover:translate-x-1" >
+                  <i class="fas fa-arrow-right text-sm"></i>
+                </span>
               </a>
               <!--View Resume-->
               <a href="#"
                class="group relative inline-flex items-center justify-center bg-[#08D665] text-white px-6 py-3 overflow-hidden transition-all duration-300 hover:bg-transparent hover:text-[#08D665] border border-[#08D665] hover:border-[#08D665] rounded-md">
-              <span class="relative z-10 text-sm font-medium uppercase tracking-wider">
-              View Resume
-              </span>
+               <span class="relative z-10 mr-2">
+               <i class="fas fa-eye text-sm"></i>
+               </span>
+             
+               <span class="relative z-10 text-sm font-medium uppercase tracking-wider">View Resume  </span>
               <span class="relative z-10 ml-2 transition-transform duration-300 transform group-hover:translate-x-1">
               <i class="fas fa-arrow-right text-sm"></i>
               </span>
@@ -346,6 +343,7 @@
                 <img src="https://skillicons.dev/icons?i=css" alt="CSS" class="w-12 h-12" />
                 <img src="https://skillicons.dev/icons?i=js" alt="JavaScript" class="w-12 h-12" />
                 <img src="https://skillicons.dev/icons?i=tailwind" alt="Tailwind" class="w-12 h-12" />
+                <img src="https://skillicons.dev/icons?i=react" alt="React" class="w-12 h-12" />
               </div>
             </div>
           </div>
@@ -381,6 +379,12 @@
                 <img src="https://skillicons.dev/icons?i=git" alt="Git" class="w-12 h-12" />
                 <img src="https://skillicons.dev/icons?i=github" alt="GitHub" class="w-12 h-12" />
                 <img src="https://skillicons.dev/icons?i=vscode" alt="VS Code" class="w-12 h-12" />
+                <!-- postman -->
+                <img src="https://skillicons.dev/icons?i=postman" alt="Postman" class="w-12 h-12" />
+                
+                 
+
+                
               </div>
             </div>
           </div>
@@ -393,7 +397,7 @@
       <!-- Section Title -->
       <h2 class="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-[#08D665] mb-4 sm:mb-6 md:mb-8 lg:mb-10 font-['Oswald','sans-serif'] flex flex-col sm:flex-row items-center justify-center text-center gap-2 sm:gap-3">
           <img src="./images/coding (2).png" alt="Competitive Programming" class="w-8 sm:w-10 md:w-12 lg:w-14 xl:w-16 h-auto object-contain">
-          <span class="leading-tight">Competitive Programming Profiles</span>
+          <span class="leading-tight">Competitive Programming <span class="text-white">Profiles</span></span>
       </h2>
 
       <!-- Cards Container -->
@@ -597,17 +601,18 @@
     <section id="training" class="bg-[#09122C] py-12 sm:py-16 md:py-20">
       <div class="container mx-auto px-4 sm:px-6 md:px-8 lg:px-24 xl:px-32">
       <h2 class="text-3xl sm:text-4xl font-bold text-center text-[#08D665] mb-8 font-['Oswald']">
-        <i class="fas fa-book-open mr-2"></i> TRAINING AND COURSES
+        <i class="fas fa-book-open mr-2"></i> TRAINING <span class="text-white">AND</span> COURSES
       </h2>
 
-      <div class="flex flex-col bg-black p-4 sm:p-6 rounded-lg mb-4">
-       <div>
-        <div class="flex gap-2 sm:gap-4 items-center sm:flex-row sm:items-start mb-4">
-          <!-- Icon -->
-          <i class="fas fa-graduation-cap text-3xl sm:text-4xl text-[#08D665] mb-4 sm:mr-4"></i>
       
-          <!-- Text Content -->
-          <div class="flex-grow  sm:text-left mb-4 sm:mb-0">
+
+      <div class="bg-black p-4 sm:p-6 rounded-lg mb-4 grid grid-cols-1 sm:grid-cols-3 gap-6 items-center">
+        <!-- Text Container -->
+        <div class="sm:col-span-2  sm:p-10 flex gap-4 items-start">
+          <div>
+            <i class="fas fa-graduation-cap text-3xl sm:text-4xl text-[#08D665]"></i>
+          </div>
+          <div>
             <h3 class="text-lg sm:text-xl font-semibold mb-2 text-[#08D665]">
               Complete Python Programming and Basic Data Science Training
             </h3>
@@ -619,26 +624,25 @@
             </p>
           </div>
         </div>
-         <!-- Button -->
-         <div class="flex justify-center sm:justify-end">
+      
+        <!-- Button -->
+        <div class="text-center sm:text-right mx-4">
           <a href="https://drive.google.com/file/d/1CIt4vMu_cSNNXBWK4RPJ9vKvMIfC1A5k/view?usp=sharing"
-             class="w-full sm:w-auto px-4 py-2 bg-[#08D665] text-white hover:bg-transparent hover:text-[#08D665] border border-[#08D665] transition-colors duration-300 text-sm sm:text-base rounded text-center">
+          class="w-full sm:w-auto inline-block px-4 py-2 bg-[#08D665] text-white hover:bg-transparent hover:text-[#08D665] border border-[#08D665] transition-colors duration-300 text-sm sm:text-base rounded text-center">
             View Certificate
           </a>
         </div>
-       </div>
-      
-       
       </div>
       
-
-      <div class="flex flex-col bg-black p-4 sm:p-6 rounded-lg mb-4">
-        <div class="flex gap-2 sm:gap-4 items-center sm:flex-row sm:items-start mb-4">
-          <!-- Icon -->
-          <i class="fas fa-book text-3xl sm:text-4xl text-[#08D665] mb-4 sm:mr-4"></i>
       
-          <!-- Text Content -->
-          <div class="flex-grow  sm:text-left mb-4 sm:mb-0">
+
+      <div class="bg-black p-4 sm:p-6 rounded-lg mb-4 grid grid-cols-1 sm:grid-cols-3 gap-6 items-center">
+        <!-- Text Container -->
+        <div class="sm:col-span-2 p-6 sm:p-10 flex gap-4 items-start">
+          <div>
+            <i class="fas fa-book text-3xl sm:text-4xl text-[#08D665]"></i>
+          </div>
+          <div>
             <h3 class="text-lg sm:text-xl font-semibold mb-2 text-[#08D665]">
               Complete CSE Fundamentals With Phitron
             </h3>
@@ -650,14 +654,16 @@
           </div>
         </div>
       
-        <!-- Button -->
-        <div class="flex justify-center sm:justify-end">
+        <!-- Button: full width on small screens, auto on sm+ -->
+        <div class="flex justify-center sm:justify-end mx-4">
           <a href="https://drive.google.com/file/d/1HXBpBQTIvhAXr97cvpslgpIRZjfya5/view?usp=sharing"
-             class="w-full sm:w-auto px-4 py-2 bg-[#08D665] text-white hover:bg-transparent hover:text-[#08D665] border border-[#08D665] transition-colors duration-300 text-sm sm:text-base rounded text-center">
+             class="w-full sm:w-auto inline-block px-4 py-2 bg-[#08D665] text-white hover:bg-transparent hover:text-[#08D665] border border-[#08D665] transition-colors duration-300 text-sm sm:text-base rounded text-center">
             View Certificate
           </a>
         </div>
       </div>
+      
+      
       
       </div>
     </section>
